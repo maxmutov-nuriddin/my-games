@@ -31,7 +31,7 @@ import './welcome.css';
 
 const WelcomePage = () => {
   useEffect(() => {
-    const audioElement = new Audio('../../public/music_second.mp3');
+    const audioElement = new Audio('./music_second.mp3');
 
     const playSound = () => {
       audioElement.play();
