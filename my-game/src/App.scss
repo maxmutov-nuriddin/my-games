@@ -214,6 +214,7 @@ body {
 }
 
 .postitions {
+  position: fixed !important;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -240,5 +241,6 @@ body {
 
 .active {
   opacity: 0.7;
+  text-shadow: 0 0 5px rgb(242, 0, 0, 1);
 }
 

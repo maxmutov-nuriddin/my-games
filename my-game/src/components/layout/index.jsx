@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { NavLink } from "react-router-dom"
 
+import './nav.scss'
+
 const Layout = () => {
   const [activ, setActive] = useState(false)
-
 
   function activsFunc() {
     setActive(activ ? false : true)
@@ -16,13 +17,16 @@ const Layout = () => {
         <div className={`titles ${activ ? 'titles__nav' : ''} `}>
           <ul className={` d-flex justify-content-between gap-4 ${activ ? 'titles__list' : ''} `}>
             <li>
-              <NavLink className='fs-5 fw-bold text-light' to='/FirstGame'><p className={`count__game text-info ${activ ? 'title__text' : ''}`}>First game</p></NavLink>
+              <NavLink onClick={() => setActive(false)} className='fs-5 fw-bold text-light' to='/'><p className={`count__game text-info ${activ ? 'title__text' : ''}`}>All game</p></NavLink>
             </li>
             <li>
-              <NavLink className='fs-5 fw-bold text-light' to='/SecondGame'><p className={`count__game text-info ${activ ? 'title__text' : ''}`}>Second game</p></NavLink>
+              <NavLink onClick={() => setActive(false)} className='fs-5 fw-bold text-light' to='/FirstGame'><p className={`count__game text-info ${activ ? 'title__text' : ''}`}>First page</p></NavLink>
             </li>
             <li>
-              <NavLink className='fs-5 fw-bold text-light' to='/ThirdGame'><p className={`count__game text-info ${activ ? 'title__text' : ''}`}>Third game</p></NavLink>
+              <NavLink onClick={() => setActive(false)} className='fs-5 fw-bold text-light' to='/SecondGame'><p className={`count__game text-info ${activ ? 'title__text' : ''}`}>Second page</p></NavLink>
+            </li>
+            <li>
+              <NavLink onClick={() => setActive(false)} className='fs-5 fw-bold text-light' to='/ThirdGame'><p className={`count__game text-info ${activ ? 'title__text' : ''}`}>Third page</p></NavLink>
             </li>
           </ul>
         </div>
